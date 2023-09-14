@@ -16,4 +16,9 @@ class SampleWebController extends WebController
     {
         return "Voilà votre paramètre : $parametre";
     }
+
+    function trends(): string
+    {
+        return Template::render("views/global/trends.php", array("titre" => "Trends cacahuete", "date" => date("d-m-Y à H:i") ));
+    }
 }
